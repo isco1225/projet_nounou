@@ -1,0 +1,370 @@
+body{
+    top: 0;
+    left: 0;
+    margin: 0;
+    padding: 0;
+    background-color: #ebeaea;
+    max-width: 100%;
+    overflow-x: hidden;
+}
+#acceuil a{
+    color: red;
+
+}
+#acceuil a::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%; /* Position du début du border */
+    transform: translateX(0%); /* Pour aligner au centre */
+    animation: hover_border 3s infinite; /* Appliquer l'animation au survol */
+}
+header{
+    display: flex;
+    flex-direction: column;
+}
+/* styles navbar top*/
+.nav-top{
+    display: flex;
+    text-align: center;
+    justify-content: center;
+    margin-top: -10px;
+    height: 80px;
+}
+.nav-top h1{
+    text-align: center;
+    margin-left: 50px;
+}
+.nav-top h1 a{
+    color: #000;
+    text-decoration: none;
+}
+.nav-top h1 span{
+    position: absolute;
+    margin-left: -100px;
+    font-size: 15px;
+    color: #ccc;
+}
+#insta{
+    margin-right: 320px;
+}
+.rs{
+    margin-right: 5px;
+}
+#facebook, #twitter,
+#insta{
+    cursor: pointer;
+    border-radius: 100%;
+    border: 0.5px solid #ccc;
+    width: 35px;
+    background-color: white;
+    font-size: 15px;
+    fill: #000;
+    
+}
+#btn-connexion, #btn-inscription{
+    border: none;
+    background-color: #000;
+    height: 40px;
+    width: 150px;
+    color: white;
+    margin-left: 15px;
+    border-radius: 5px;
+} 
+#btn-connexion:hover, #btn-inscription:hover{
+    background-color: #2b2b2b;
+}
+
+#btn-connexion{
+    margin-left: 280px;
+}
+
+/*
+.nav-top input{
+    border-right: none;
+    border: none;
+    background-color: white;
+    outline: none;
+    margin-top: 25px;
+    height: 35px;
+    width: 220px;
+    margin-left: 300px;
+    border-top-left-radius:30px ;
+    border-bottom-left-radius:30px ;
+}
+#btn-search{
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    border-left: none;
+    height: 35px;
+    background-color: rgb(237, 0, 0);
+    color: white;
+}
+
+#btn-search:hover{
+
+}
+#btn-search:active{
+    
+}
+*/
+.nav-top button{
+    margin-top: 25px;
+    height: 30px;
+}
+
+/* styles navbar down */
+.nav-down{
+    display: flex;
+    margin-top: 0px;
+    height: 60px;
+    width:100%;
+    background-color: #2e2e2e;
+    text-align: center;
+    justify-content: center;
+}
+@keyframes hover_border {
+    0% {
+        border-bottom: 0px solid #f4f2f2;
+        width: 0;
+        left: 50%;
+    }
+    50% {
+        border-bottom: 1.5px solid #f4f2f2;
+        width: 50%;
+        left: 0;
+    }
+    100% {
+        border-bottom: 2px solid #f4f2f2;
+        width: 100%;
+        left: 0;
+    }
+}
+
+.nav-down li{
+    list-style-type: none;
+    margin-top: 20px;
+    position: relative;
+}
+.nav-down li a:hover::after {
+    content: "";
+    position: absolute;
+    bottom: -2px;
+    left: 50%; /* Position du début du border */
+    transform: translateX(0%); /* Pour aligner au centre */
+    animation: hover_border 0.5s forwards; /* Appliquer l'animation au survol */
+}
+.nav-down li a:active{
+    color: rgb(228, 3, 3);
+}
+.nav-down li a{
+    padding: 0px 30px;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    color: white;
+}
+.nav-down button{
+    margin-top: 10px;
+
+    border-radius: 5px;
+    border: none;
+    height: 35px;
+    background-color: rgb(37, 37, 182);
+    color: white;
+}
+
+
+/* styles du main (au niveau de l'image)*/
+#img1{
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: absolute;
+    z-index: -1;
+    filter: brightness(0.5);
+    width: 100%;
+    height: 80%;
+}
+.text-space{
+    text-align: center;
+    justify-content: center;
+    margin-top: 10px;
+    position: absolute;
+    z-index: 1;
+    margin-left: 10px;
+    font-size: 22px;
+    padding: 0px 20px;
+   
+    color: white;
+}
+.text-space h4{
+    color: rgb(221, 178, 20);
+}
+
+#btn-location{
+    border: none;
+    border-top-left-radius: 30px;
+    border-bottom-left-radius: 30px;
+    height: 40px;
+    background-color: black;
+    color: white;
+}
+.search{
+    display: flex;
+    justify-content: center;
+}
+.search input{
+    width: 200px;
+    outline: none;
+    border: none;
+    margin-right: 10px;
+}
+#choice{
+    outline: none;
+    height: 40px;
+    width: 400px;
+    border: none;
+}
+#btn-search{
+    color: white;
+    background-color: red;
+    border: none;
+    cursor: pointer;
+    border-top-right-radius: 30px;
+    border-bottom-right-radius: 30px;
+    width: 70px;
+    height: 40px;
+}
+
+.comptes{
+    display: flex;
+    transform: translate(0%, 140%);
+    justify-content: center;
+    align-items: center;
+}
+.message{
+    position: absolute;
+    margin-left: 100px;
+    margin-top: 600px;
+}
+.cadre1{
+    position: relative;
+    height: 500px;
+    width: 30%;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-image: url('//localhost/nounou/img/img_parent.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+}
+
+
+.cadre2::before, .cadre1::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.332); /* Couleur semi-transparente noire */
+    border-radius: 15px;
+}
+.cadre2{
+    position: relative;
+    height: 500px;
+    width: 30%;
+    margin-left: 120px;
+    border-radius: 15px;
+    text-align: center;
+    transition: all 0.3s ease;
+    background-image: url('//localhost/nounou/img/img_nounou.jpg');
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    
+}
+.cadre1:hover{
+    box-shadow: 0px 0px 15px #000;
+}
+.cadre2:hover{
+    box-shadow: 0px 0px 15px #000;  
+}
+.comptes button{
+    height: 50px;
+    width: 210px;
+    background-color: #2e2e2e;
+    border: 1px solid #fff;
+    border-radius: 10px;
+   /* margin-top: 400px;*/
+    color: white;
+    font-weight: bold;
+    transition: all 0.3s ease;
+
+    position: absolute; /* Positionnement absolu pour centrer le bouton */
+    top: 50%; /* Positionne le haut du bouton à 50% de la hauteur du cadre */
+    left: 50%; /* Positionne la gauche du bouton à 50% de la largeur du cadre */
+    transform: translate(-50%, 250%); /* Déplace le bouton de moitié de sa propre taille vers le haut et vers la gauche pour le centrer */
+    padding: 10px 20px; /* Ajoute un peu de marge intérieure pour le bouton */
+    cursor: pointer;
+}
+.comptes button:hover{
+    height: 51px;
+    width: 215px;
+    border: 1px solid #fff;
+    box-shadow: 0px 0px 15px #fff;
+}
+/* styles du main (en bas de l'image)*/
+
+.info{
+    position: absolute;
+    height: 200px;
+    width: 90%;
+    display: flex;
+    background-color: #ccc;
+    transform: translate(5%, 180%);
+    border-radius: 10px;
+    box-shadow: 0px 0px 5px #000;
+}
+.box{
+    height: 100%;
+    width: 100%;
+    background-color: #2e2e2e;
+    color: white;
+    padding: 0px 10px 0px 10px;
+    text-align: center;
+    justify-content: center;
+}
+.box h2{
+    color: rgb(189, 160, 54);
+    margin-top: 50px;
+    font-size: 22px;
+    
+}
+#box1{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+#box4{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+
+
+
+
+
+
+
+
+/* styles footer */
+
+footer{
+    height: 150px;
+    background-color: white;
+    transform: translateY(500%);
+}

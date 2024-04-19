@@ -1,0 +1,29 @@
+body {
+    font-family: Arial, sans-serif;
+}
+
+.emploi-du-temps {
+    display: grid;
+    grid-template-columns: 120px repeat(5, 5fr); /* Première colonne pour les horaires */
+    grid-gap: 10px;
+}
+
+.heure {
+    background-color: #d3d3d3;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.jour {
+    background-color: #f0f0f0;
+    padding: 10px;
+    text-align: center;
+    font-weight: bold;
+}
+
+.cours {
+    background-color: #fff;
+    padding: 10px;
+    border: 1px solid #ccc;
+}
